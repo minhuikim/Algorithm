@@ -184,7 +184,7 @@ print(sample(lst, 1))   # list내의 값을 원하는 개수만큼 무작위로 
 users = range(1, 21)     # 1부터 20까지 숫자를 생성
 print(type(users))       # <class 'range'>
 users = list(users)
-print(type(users))       # <class 'range'>
+print(type(users))       # <class 'list'>
 print(users)             # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 winners = sample(users, 4)  # 4명 중에서 1명은 치킨, 3명은 커피
 
