@@ -255,7 +255,7 @@ with open("./python/study.txt", "r", encoding="utf8") as study_file:
 
 조건 : 파일명은 '1주차.txt', '2주차.txt', ... 와 같이 만듭니다.
 '''
-# for index in range(1, 21):
+# for index in range(1, 11):
 #     with open("./python/practice7/"+str(index)+"주차.txt", "w", encoding="utf8") as study_file:
 #         study_file.write("- {0} 주차 주간보고 -".format(index))
 #         study_file.write("\n부서 : ".ljust(5))
