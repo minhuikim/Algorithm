@@ -67,5 +67,3 @@ valkyrie.fly(valkyrie.name, "3시")
 # FlyableAttackUnit -상속-> AttackUnit
 # FlyableAttackUnit -상속-> Flyable
 # AttackUnit -상속-> Unit
-
-
