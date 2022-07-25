@@ -263,7 +263,7 @@ with open("./python/study.txt", "r", encoding="utf8") as study_file:
 #         study_file.write("\n업무 요약 : ".ljust(8))
 
 for i in range(1, 11):
-    with open("./python/practice7/" + str(i) + "주차.txt", "w", encoding="utf8") as report_file:
+    with open("./python/practice/practice7/" + str(i) + "주차.txt", "w", encoding="utf8") as report_file:
         report_file.write("- {0} 주차 주간보고 -".format(i))
         report_file.write("\n부서 : ")
         report_file.write("\n이름 : ")
