@@ -1,19 +1,23 @@
-n = int(input())
-num = int(0)
+num = int(input())
 
-if n<10:
-    print(n)
+if num<10:
+    print(0)
 else:
-    for num in range(10, n):
+    for n in range(10, num):
         i = int(10)
-        sum = int(num)
-        print("print")
+        sum = int(n)
+        m = int(n)
+
+        while i < n:
+            if sum == n:
+                sum += n % i
+            sum += n // i % i
+            i *= 10
         
-        while num > 0:
-            sum += num % i
-            num = num // i
-            i = i * 10
-        if sum==n:
-            m = n
-            exit
-    print(m)
+        if sum == num:
+            break
+        elif n == num:
+            m = 0
+            break 
+
+    print(n)
