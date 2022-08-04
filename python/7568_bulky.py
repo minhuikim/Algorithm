@@ -1,10 +1,19 @@
 mans = int(input())
-# body = []
-x = y = []
+wh = ""
+body = []
+x = y = 0
 
-for n in range(0,mans):
-    x[n] = input()
-    y[n] = input()
+
+for n in range(mans):
+    wh = input()
+
+    x = wh[:wh.find(" ")]
+    y = wh[wh.find(" ")+1:]
+
+    body.insert(n, [x, y, 0])
+
+    print(body)
+    
 
 #     body[n].append[x, y, 1]
 
