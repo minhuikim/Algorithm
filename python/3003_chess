@@ -1,0 +1,17 @@
+piece = input()
+piece = piece.split(" ")
+
+def piece_num(a, b):
+    if a == b:
+        return 0
+    else:
+        return a - b
+
+for p in range(0,6):
+    p = int(p)
+    if p <= 1:
+        print(piece_num(1, int(piece[p])), end=" ")
+    elif p >= 5:
+        print(piece_num(8, int(piece[p])), end=" ")
+    else:
+        print(piece_num(2, int(piece[p])), end=" ")
