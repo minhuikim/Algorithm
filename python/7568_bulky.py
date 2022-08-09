@@ -1,18 +1,22 @@
 mans = int(input())
 wh = ""
-body = []
+human = {}
+key_val = {}
 x = y = 0
 
 
-for n in range(mans):
+
+for n in range(0, mans):
     wh = input()
 
     x = wh[:wh.find(" ")]
     y = wh[wh.find(" ")+1:]
 
-    body.insert(n, [x, y, 0])
+    key_val = {}
+    key_val[x] = y
+    human[n] = key_val
 
-    print(body)
+    # print(body)
     
 
 #     body[n].append[x, y, 1]
@@ -25,3 +29,10 @@ for n in range(mans):
 
 # for n in range(0,mans):
 #     print(body[n][2])
+
+# dic_key_max = max(body.keys())
+# print(dic_key_max)
+# dic_val_max = max(body.values())
+# print(dic_val_max)
+print(human)
+# print(body)
