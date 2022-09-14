@@ -18,6 +18,6 @@ for n in range(0, mans):
 
 for n in range(0, mans):
     for m in range(0, n):
-        
+        break
 
 print(score)
