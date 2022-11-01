@@ -1,3 +1,5 @@
-mans = int(input())
-bulky = [[0 for i in range(2)] for j in range(mans)]
+s = "Herlo World"
+m = s[2:3] + s[-3:-1]
+print(m)
 
+print(5/ 1)
