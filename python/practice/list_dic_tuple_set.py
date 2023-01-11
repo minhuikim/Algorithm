@@ -58,6 +58,8 @@ num_list = [5, 4, 3, 2, 1]
 num_list.extend(mix_list)   # num_list에 mix_list 합침
 print(num_list)             # [5, 4, 3, 2, 1, '조세호', 20, True]
 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 # 사전 (키에 대한 중복이 허용되지 않음)
 cabinet = {3:"유재석", 100:"김태호"}
 print(cabinet[3])           # 유재석
@@ -67,8 +69,8 @@ print(cabinet.get(3))       # 유재석
 print(cabinet.get(5))       # None
 print(cabinet.get(5, "사용 가능"))       # 값이 없으면 문장 출력
 
-print(3 in cabinet)         # in 사전 자료형 안에 값이 있는지 확인
-                            # True
+# in 사전 자료형 안에 값이 있는지 확인
+print(3 in cabinet)         # True
 print(5 in cabinet)         # False
 
 cabinet = {"A-3":"유재석", "B-100":"김태호"}    # 숫자 말고 문장도 사용 가능
@@ -98,6 +100,8 @@ print(cabinet.items())          # dict_items([('B-100', '김태호'), ('C-20', '
 cabinet.clear()
 print(cabinet)                  # {}
 
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
 ### 튜플 (더하거나 뺄 수 없는 고정값)
 menu = ("돈까스", "치즈까스")
 print(menu[0])          # 돈까스
@@ -111,6 +115,8 @@ print(name, age, hobby) # 김종국 20 코딩
 
 (name, age, hobby) = ("김종국", 20, "코딩")
 print(name, age, hobby) # 김종국 20 코딩
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 ### 세트 (set, 집합)
 # 중복 안됨, 순서 없음
