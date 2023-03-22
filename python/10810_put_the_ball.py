@@ -1,6 +1,7 @@
 n, m = map(int, input().split())
 
-basket = [0 for i in range(n)]
+basket = [0]*n
+# basket = [0 for i in range(n)]
 
 for _ in range(m):
     i, j, k = map(int, input().split())
