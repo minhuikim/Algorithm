@@ -1,5 +1,7 @@
-s = "Herlo World"
-m = s[2:3] + s[-3:-1]
-print(m)
+begin = 1
+end = 5
 
-print(5/ 1)
+
+for j in range(begin, end):
+    print(begin, end, j)
+    begin = begin + 1
