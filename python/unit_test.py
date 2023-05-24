@@ -1,7 +1,3 @@
-begin = 1
-end = 5
+c = 'A'
 
-
-for j in range(begin, end):
-    print(begin, end, j)
-    begin = begin + 1
+print(c[-1:])
