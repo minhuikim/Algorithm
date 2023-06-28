@@ -1,4 +1,3 @@
-a = "abcd"
-print(a[0:len(a)-1])
+div = [1, 2, 3]
 
-print(int("1234AB", 12))
+print(div[-1])
