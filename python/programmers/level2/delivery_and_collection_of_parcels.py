@@ -5,7 +5,6 @@ def solution(cap, n, deliveries, pickups):
     deli = pick = 0
     for i in range(n-1, -1, -1):
         print(i, deliveries[i], pickups[i])
-        # print("/")
         cnt = 0
         print(deli, deliveries[i], deli < deliveries[i], pick, pickups[i], pick < pickups[i])
         while deli < deliveries[i] or pick < pickups[i]:
