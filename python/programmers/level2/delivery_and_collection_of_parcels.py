@@ -1,42 +1,27 @@
-def find_last(n, deliveries, pickups):
-    print(n, deliveries, pickups)
-    # for i in reversed(range(n)):
-    #     print(i, deliveries[i], pickups[i])
-    #     if deliveries[i] > 0 or pickups[i] > 0:
-    return 0
-
+# 탐욕법 https://school.programmers.co.kr/questions/42177
 def solution(cap, n, deliveries, pickups):
     answer = 0
-    
-    x, y = cap, n - 1
-    flag = True
-    while max(deliveries) > 0 or max(pickups) > 0:
-        # 배달
-        if flag == True:
-            if x > 0:
-                x -= 1
-                deliveries[y] -= 1
-            else:
-                answer += n
-                # 차 비면 끝에서 회수
-                y = n - 1
-                flag = False
-        else:
-            if x < cap:
-                # 회수 하나씩 추가
-                x += 1
-                pickups[y] -= 1
-            else:
-                answer += n
-                y = find_last(n, deliveries, pickups)
-                n = y + 1
-                break
-                                
+    print(deliveries, pickups, deliveries[0], pickups[0])
+    deli = pick = 0
+    for i in range(n-1, -1, -1):
+        print(i, deliveries[i], pickups[i])
+        # print("/")
+        cnt = 0
+        print(deli, deliveries[i], deli < deliveries[i], pick, pickups[i], pick < pickups[i])
+        while deli < deliveries[i] or pick < pickups[i]:
+            cnt += 1
+            deli += cap
+            pick += cap
+            print(i, cnt, deli, pick, deliveries[i], pickups[i], answer)
+        deli -= deliveries[i]
+        pick -= pickups[i]
+        answer = answer + ((i+1)*cnt*2)
+        print(i, deli, pick, deliveries[i], pickups[i], answer)
     return answer
 
-cap = 4
-n = 5
-deliveries = [1, 0, 3, 1, 2]
-pickups = [0, 3, 0, 4, 0]
-
+cap = 2
+n = 2
+deliveries = [1, 0]	
+pickups = [1, 0]
+# 2
 print(solution(cap, n, deliveries, pickups))
