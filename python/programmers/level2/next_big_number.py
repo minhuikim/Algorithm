@@ -4,7 +4,7 @@ def solution(n):
     while True:
         answer += 1
         if bin_n_cnt == bin(answer).count("1"):
-            break;
+            break
     return answer
 
 n = 78
