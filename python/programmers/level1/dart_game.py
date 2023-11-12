@@ -1,23 +1,7 @@
 import re
 
-def calculate_score(score, j, option):
-    print(score,j,option,end=" = ")
-
-    score_dict = {'S':1, 'D':2, 'T':3}
-
-    if option == '*':
-        if(len(score)>1):
-            score[j-1] *=2
-        score[j] *= 2
-    elif option == '#':
-        score[j] *= -1
-    else:
-        score[j] **= score_dict[option]
-    print(score)
-    return score
-
 def solution(dartResult):
-
+    score_dict = {'S':1, 'D':2, 'T':3}
     result_list = re.split('([^0-9])', dartResult)
     result_list = list(filter(None, result_list))
 
@@ -26,15 +10,16 @@ def solution(dartResult):
         if result_list[i].isdigit():
             score.append(int(result_list[i]))
             if i > 0:
-                # score = calculate_score(score, j, result_list[i-1])
                 j += 1
-        # elif result_list[i].isalpha():
-        #     score = calculate_score(score, j, result_list[i])
         else:
-            score = calculate_score(score, j, result_list[i])
-
-        # if i == len(result_list)-1:
-        #     score = calculate_score(score, j, result_list[i])
+            if result_list[i] == '*':
+                if(len(score)>1):
+                    score[j-1] *=2
+                score[j] *= 2
+            elif result_list[i] == '#':
+                score[j] *= -1
+            else:
+                score[j] **= score_dict[result_list[i]]
 
     return sum(score)
 
